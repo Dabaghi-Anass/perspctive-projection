@@ -30,19 +30,20 @@ let cubeVertices = [
   [-1, -1, -1],
   [1, -1, -1],
 ];
-let sphereGeoMetry = generateSphereVertices(100, 80);
-// am changing number of vertices more vert means more resolution
-let torusGeoMetry = generateTorusVertices(60, 200, 50, 60);
-updateAngle("y", angle.y + 45);
-updateAngle("z", angle.z + 15);
-updateAngle("x", angle.x + 15);
+let sphereGeoMetry = generateSphereVertices(100, 50);
+
+let torusGeoMetry = generateTorusVertices(100, 200, 70, 60);
+
+updateAngle("z", angle.z + 10);
+updateAngle("x", angle.x + 25);
+
 let translation = innerHeight / 1.5;
 torusGeoMetry = scaleMesh(torusGeoMetry, 0.5);
 cubeVertices = scaleMesh(cubeVertices, 80);
 function loop() {
   requestAnimationFrame(loop);
   ctx.clearRect(0, 0, width, height);
-  updateAngle("y", angle.y + 6);
+  updateAngle("y", angle.y + 1);
   let projectedTorus = Mesh(torusGeoMetry, {
     ty: translation / 2,
     tx: translation * 2,

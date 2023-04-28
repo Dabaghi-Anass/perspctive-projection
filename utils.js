@@ -1,5 +1,5 @@
 import Vertex from "./vertex.js";
-let fov = 60;
+let fov = 90;
 let aspect = innerWidth / innerHeight;
 let near = 0.1;
 let far = 1000;
