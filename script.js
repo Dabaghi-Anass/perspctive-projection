@@ -41,7 +41,7 @@ let translation = innerHeight / 1.5;
 torusGeoMetry = scaleMesh(torusGeoMetry, 0.5);
 cubeVertices = scaleMesh(cubeVertices, 80);
 function loop() {
-  requestAnimationFrame(loop);
+  // requestAnimationFrame(loop);
   ctx.clearRect(0, 0, width, height);
   updateAngle("y", angle.y + 1);
   let projectedTorus = Mesh(torusGeoMetry, {
@@ -67,4 +67,6 @@ function loop() {
   pushMesh(ctx, projectedSphere, { vertices: true });
   pushMesh(ctx, projectedTorus, { vertices: true });
 }
-onload = () => requestAnimationFrame(loop);
+// onload = () => requestAnimationFrame(loop);
+let frameRate = 30; //fixing the frame rate will gain more performance
+setInterval(loop, 1000 / frameRate);
