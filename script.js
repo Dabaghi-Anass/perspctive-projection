@@ -48,23 +48,23 @@ function loop() {
     ty: translation / 2,
     tx: translation * 2,
   });
-  let projectedSphere = Mesh(sphereGeoMetry, {
-    ty: translation / 2,
-    tx: 300 + translation * 2,
-  });
-  let projectedCube = Mesh(cubeVertices, {
-    ty: translation / 2,
-    tx: -300 + translation * 2,
-  });
+  // let projectedSphere = Mesh(sphereGeoMetry, {
+  //   ty: translation / 2,
+  //   tx: 300 + translation * 2,
+  // });
+  // let projectedCube = Mesh(cubeVertices, {
+  //   ty: translation / 2,
+  //   tx: -300 + translation * 2,
+  // });
   fill(ctx, "#ff005940");
-  pushMesh(ctx, projectedCube, {
-    vertices: true,
-    edges: true,
-    faces: true,
-    stroke: 3,
-  });
+  // pushMesh(ctx, projectedCube, {
+  //   vertices: true,
+  //   edges: true,
+  //   faces: true,
+  //   stroke: 3,
+  // });
   fill(ctx, "#ffbf0070");
-  pushMesh(ctx, projectedSphere, { vertices: true });
+  // pushMesh(ctx, projectedSphere, { vertices: true });
   pushMesh(ctx, projectedTorus, { vertices: true });
 }
 // onload = () => requestAnimationFrame(loop);
